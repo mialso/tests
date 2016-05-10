@@ -1,0 +1,242 @@
+	[related_data]:
+<top_down> approach
+		[description]:
+	begins from complex pieces and then dividing them
+	 into successively smaller pieces. no coding until a sufficient
+	 level of detail has been reached in the design of at least some
+	 part of system. software development implemented attaching
+	 the stabs in place of module.
+		[base]:
+	piece
+	part
+	system
+	stub
+	module
+	software
+<bottom_up> approach
+		[description]:
+	the base elements of a system are first specified in great detail.
+	These elements are then linked together to form larger subsystems,
+	 on so on until entire system is ready. begin coding and testing
+	 as soon as first module is specified.
+		[base]:
+	element
+	system
+	subsystem
+	module
+	
+	[types]:
+<black_box>
+		[description]:
+	internal design is not considered.
+	tests based on requirements and functionality
+		[base]:
+	requirements
+	functionality
+<white_box>
+		[description]:
+	based on knowledge of internal logic of an app code.
+	tests based on coverage of code segments, branches, paths, conditions
+		[base]:
+	design
+	logic
+	app code
+	code statements
+	branches
+	paths
+	conditions
+<unit>
+		[description]:
+	individual components and modules. may require test driver modules
+	 or test harnesses
+		[base]:
+	component
+	module
+	test driver
+	test harness
+		[related_data]:
+		test_harness
+				[description]:
+			it is a software and test data, to test a program unit
+			 by running it under varying conditions,
+			 and monitoring its behavior and outputs
+				[parts]:
+			test execution engine
+			test script repository
+				[objectives]:
+			automate the testing process
+			execute test suites of test cases
+			generate associated test reports
+				[base]:
+			software
+			data
+			program unit
+			conditions
+			behavior
+			output
+		test stub
+				[description]:
+			it is a program to simulate software behavior.
+			provide canned answers to calls made during the tests
+				[base]:
+			software
+			behavior
+			answer
+			call
+<incremental_integration>
+		[description]:
+	bottom_up approach, i.e testing as new functionality is added.
+	modules and functionality should be independent enough
+		[base]:
+	functionality
+	modules
+		[event]:
+	new 'element' added
+		i.e new functionality added
+<integration>
+		[description]:
+	to verify combined functionality after module integration. Modules are
+	 typically code modules, individual apps, client/server apps, etc
+		[base]:
+	functionality
+	module
+		[event]:
+	'element' integration
+<functional>
+		[description]:
+	ignores the internal part and focuses on the output is per requirement
+	 or not. black_box geared to functional requirements
+		[base]:
+	functional requirements
+<system>
+		[description]:
+	entire system tested per requirements, black_box based on overall
+	 requirements specifications. covers all combined parts of a system
+		[base]:
+	system
+	requirements
+<end_to_end>
+		[description]:
+	similar to system testing. testing of a complete app environment in a
+	 situation, that mimics real-world use
+		[base]:
+	system
+	app environment
+	situation
+<sanity>
+		[description]:
+	to determine if a new software version is performing well enough to
+	 accept it for a major testing effort
+		[base]:
+	software version
+<regression>
+		[description]:
+	app as a whole after modification module or functionality
+		[base]:
+	app
+	module
+	functionality
+		[event]:
+	'element' modification
+<acceptance>
+		[description]:
+	verify if system meets customer(user) specified requirements
+		[base]:
+	requirements
+<load>
+		[description]:
+	system behaviour under load to determine system response time
+	 degradation or failure
+		[base]:
+	load
+	system
+	time
+<stress>
+		[description]:
+	system is tested beyond specifications to check how and when it fails
+		[base]:
+	system
+	specifications
+	fail
+<performance>
+		[description]:
+	often used interchangeably with 'load' and 'stress'. to check whether
+	 system meets performance requirements
+		[base]:
+	system
+	performance reqirements
+<usability>
+		[description]:
+	user-friendness check, application flow is tested, can user
+	 understand the app easily, is there help documentation whenever
+	 user stuck at any point. system navigation checked
+		[base]:
+	user
+	app
+	help documentation
+	point
+	navigation
+<install/uninstall>
+		[description]:
+	full, partial or upgrade install/uninstall processes
+	 in different environment
+		[base]:
+	process
+	environment
+	OS
+	hardware
+	software
+<recovery>
+		[description]:
+	how system recovers from crashes, hardware failures,
+	 catastrophic problems
+		[base]:
+	crash
+	failure
+	problem
+<security>
+		[description]:
+	can system be penetrated by any hacking way. unauthorized internal
+	 or external access. is system, database is safe from attacks
+		[base]:
+	system
+	access
+	attack
+<compatibility>
+		[description]:
+	how well software performs in a particular software/hardware/OS/network
+	 environment and different combinations
+		[base]:
+	environment
+	software
+	hardware
+	os
+	network
+<comparison>
+		[description]:
+	comparison of product strengths and weaknesses with previous version,
+	 other similar software
+		[base]:
+	product
+	strength
+	weakness
+	version
+<alpha>
+		[description]:
+	in house virtual user environment created. is done at the end
+	 of app development. minor design changes after
+		[base]:
+	app
+	user environment
+	design
+		[event]:
+	end of development
+<beta>
+		[description]:
+	typically by end users. final testing before releasing app
+		[base]:
+	app
+	user
+	release
+		[event]:
+	before release
