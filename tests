@@ -5,7 +5,7 @@
 	 into successively smaller pieces. no coding until a sufficient
 	 level of detail has been reached in the design of at least some
 	 part of system. software development implemented attaching
-	 the stabs in place of module.
+	 the stabs in place of modules.
 		[base]:
 	piece
 	part
@@ -17,7 +17,7 @@
 		[description]:
 	the base elements of a system are first specified in great detail.
 	These elements are then linked together to form larger subsystems,
-	 on so on until entire system is ready. begin coding and testing
+	 and so on until entire system is ready. begin coding and testing
 	 as soon as first module is specified.
 		[base]:
 	element
@@ -204,7 +204,7 @@
 	attack
 <compatibility>
 		[description]:
-	how well software performs in a particular software/hardware/OS/network
+	how well software performs in a particular software/hardware/network
 	 environment and different combinations
 		[base]:
 	environment

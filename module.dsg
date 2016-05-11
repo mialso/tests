@@ -24,6 +24,7 @@
 	is an element of a block, is a sequence of ?what? // lang dependent
 		[type]:
 	move		// move some data
+		data
 		source, destination
 		next statement = default (next line of code)
 	call|exec	// call block by name (proc or function)
@@ -37,3 +38,6 @@
 		input
 		condition
 		next statement
+			[type]:
+		error	// return error
+		fail	// exit with failure

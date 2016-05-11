@@ -1,0 +1,71 @@
+		tests lib design doc
+***************************************************************************
+	[purpose]
+* to provide user ability to test data correctness, performance, path, etc
+* to provide user ability to test blocks and paths
+* to provide user ability to test paths by using stabs
+	stab is attempt to implement some block or ??decision??, as simple
+	 as possible to make test
+* to provide user ability to test blocks by using mocks
+	mock is a pseudo data, provided to block as input or context data
+* to create tests from implementation document automatically
+* inform user about tests results
+***************************************************************************
+	[requirements]:
+		[functional]:
+* create test suites in relation to module inteface
+* fill suites with path cases
+* fill suites with block cases
+* print out success results shortly
+* print out error results with a great detail about:
+	procedure
+	context
+	block
+	path
+	input
+	output
+	syscall errors
+	dependencies (linked libs) errors
+		[performance]:
+* test should not stack on any test-case more than 0,5 seconds
+		[interface]:
+* interface should be usable through make file and bash scripts
+***************************************************************************
+	[data model]:
+(test)
+suites[]:
+suite
+	module_name
+	interface_name
+	(*test)
+	case
+		path
+		block
+result | message
+	procedure
+	context
+	syscall_error
+	lib_error
+data
+	input
+	context
+error
+	message
+***************************************************************************
+	[paths]:
+init
+	suite
+		case
+			path
+				stabs
+			block
+				mocks
+run tests
+	run interface tests
+		error output
+	run path tests
+		error output
+	run block tests
+		error output
+
+success results output
