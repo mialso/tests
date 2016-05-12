@@ -1,0 +1,96 @@
+		tests implementation doc
+**********************************************************************
+	[data]:
+MAX_SUITES
+	1+	// possible
+	10	// default
+suites_num
+	0..MAX_SUITES
+suites
+	[suite]	// array of suites
+**********************************************************************
+	[paths]:
+{init}
+		[data]:
+	suites_num == 0
+		[flow]:
+	suites_init_cleanup_handler()
+{suite_init}
+		[data]:
+	*suite = NULL
+		[blocks]:
+	
+	
+*************************************************************************
+	[interface]:
+
+(init_suite)
+		[data]:
+			[input]:
+	<module_name>
+	<interface_name>
+	(*test)()
+			[proc internal]:
+	*suite
+
+		[flow]:
+	suites_data_check()
+	suite_create()
+	suite_add_data()
+	suites_add_suite()
+
+(execute_tests)
+		[data]:
+		[flow]:
+	suites_empty<>
+		case 0 == suites_num:
+			return
+	suites_not_empty<>
+		case 0 != suites_num:
+			suite_test_execute()
+			repeat(--suites_num)
+
+(results output)
+
+(print_suites)
+		[data]:
+	suites
+		[flow]:
+	suites_empty<suites>
+		case 0: suites_empty_print()
+	suites_not_empty<suites>
+		case !0: suite_print()
+		repeat(--)
+*************************************************************************
+	[internal blocks]:
+(test)
+		[input data]:
+	void
+
+	<suites>
+(suites_data_check)
+		[data]:
+	suites_num
+	MAX_SUITES
+		[flow]:
+	suites_number_check<>
+		case 0 == suites_num:
+			suites_init_cleanup_handler()
+		case MAX_SUITES < suites_num:
+			fail_internal()
+(suites_init_cleanup_handler)
+(suites_empty_print)
+(suites_add_suite)
+	<suite>
+(suite_create)
+		[data]:
+	*suite
+		[flow]:
+	create_suite -> stdlib::calloc
+	sute_create_fail<*suite>
+		case 0: fail_external()
+(suite_add_data)
+(suite_print)
+		
+(fail_internal) -> mls_error::internal_fatal_error
+(fail_external) -> mls_error::syscall_fatal_error

@@ -1,13 +1,12 @@
 		module design document
-****************************************************************************
+*************************************************************************
 <module>
-****************************************************************************
+*************************************************************************
 		[description]:
 	is an element of a program
 		[base]:
-****************************************************************************
+*************************************************************************
 	<block>
-****************************************************************************
 		[description]:
 	is an element of a <module>, and is a sequence of <statement>s
 		[types]:
@@ -17,9 +16,8 @@
 	functionality
 	input | environment(context) before
 	output | environment(context) after
-****************************************************************************
-		<statement>s
-****************************************************************************
+*************************************************************************
+	<statement>
 		[description]:
 	is an element of a block, is a sequence of ?what? // lang dependent
 		[type]:
@@ -41,3 +39,14 @@
 			[type]:
 		error	// return error
 		fail	// exit with failure
+**********************************************************************
+	<path>
+		[description]:
+	is a logic unit, that consists of a number of blocks.
+	path is an execution flow, which depends on context data.
+	decisions are main elements to manage paths
+		[type]:		// m.b. default paths names
+	init
+	main
+	error | fail
+		

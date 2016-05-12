@@ -52,7 +52,7 @@ data
 error
 	message
 ***************************************************************************
-	[paths]:
+	[paths]:[interface]:
 init
 	suite
 		case
@@ -68,4 +68,4 @@ run tests
 	run block tests
 		error output
 
-success results output
+results output

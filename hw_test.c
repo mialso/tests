@@ -19,6 +19,7 @@ int main(void)
 		printf("NULL is not defined!!!\n");
 	}
 		
+	// test init_suite path
 	print_suites();
 	init_suite(MODULE_NAME, "say_hello", test_say_hello);
 	print_suites();
@@ -27,6 +28,7 @@ int main(void)
 	init_suite(MODULE_NAME, "stop_talking", test_test);
 	print_suites();
 	execute_tests();
+	// test max_suites path
 	init_suite(MODULE_NAME, "stop_talking", test_test);
 	init_suite(MODULE_NAME, "stop_talking", test_test);
 	init_suite(MODULE_NAME, "stop_talking", test_test);
@@ -34,6 +36,7 @@ int main(void)
 	init_suite(MODULE_NAME, "stop_talking", test_test);
 	init_suite(MODULE_NAME, "stop_talking", test_test);
 	init_suite(MODULE_NAME, "stop_talking", test_test);
+	print_suites();
 	init_suite(MODULE_NAME, "stop_talking", test_test);
 	init_suite(MODULE_NAME, "stop_talking", test_test);
 	init_suite(MODULE_NAME, "stop_talking", test_test);

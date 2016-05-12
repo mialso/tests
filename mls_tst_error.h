@@ -5,7 +5,6 @@
 
 static char *error_descriptions[5] = {
 	"max suites limit reached, change \"MAX_SUITES\" value to increase",
-	"suites counter error occured, \"suites.num\" probably < 0",
 	"memory error while suite struct allocation"
 };
 static char *proc_names[5] = {
@@ -18,7 +17,6 @@ static struct module_error module_err_data = {
 };
 enum module_error_num {
 	SUITES_LIMIT,
-	SUITES_COUNTER_ERROR,
 	SUITE_MEMORY_ERR
 };
 enum module_proc_num {
